@@ -1,0 +1,9 @@
+.headerClass img {
+    width: 90px;
+  }
+  
+  .headerClass {
+    grid-area: h;
+    background-color: lightgreen;
+  }
+  

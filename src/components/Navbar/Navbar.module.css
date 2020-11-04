@@ -1,0 +1,13 @@
+.navClass {
+    grid-area: n;
+    background-color: chocolate;
+    width: 300px;
+  }
+
+  .item {
+      color: white;
+  }
+  
+  .item.active {
+      color: gold;
+  } 
