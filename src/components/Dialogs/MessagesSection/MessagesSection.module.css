@@ -1,0 +1,42 @@
+.messagesSection {
+    background-color: moccasin;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.messagesWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.inputBlock {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    /*background-color: lightcoral;*/
+    text-align: center;
+    top: 50%;
+}
+
+.inputBlock input{
+    width: 100%;
+    height: 90px;
+    box-sizing: border-box;
+    margin: 0 0 10px 0;
+    border-radius: 40px;
+    padding-left: 30px;
+    outline: none;
+    font-size: 15px;
+}
+
+.inputBlock button{
+    width: 160px;
+    height: 55px;
+    border-radius: 20px;
+    border: none;
+    background-color: lightsalmon;
+    font-size: 20px;
+    color: white;
+}

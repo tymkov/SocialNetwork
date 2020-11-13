@@ -1,0 +1,24 @@
+.messagesBlock {
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    border: 2px solid rgba(130,130,130,0.4);
+    border-radius: 35px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.blockName {
+    font-size: 17px;
+    color: #202020;
+    margin: 0 0 0 0;
+    padding: 0 0 0 10px;
+    font-style: italic;
+}
+
+
+
+.messagesArea {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 350px;
+}

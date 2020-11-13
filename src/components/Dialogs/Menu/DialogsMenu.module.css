@@ -1,0 +1,5 @@
+.dialogsMenu {
+    background-color: lightseagreen;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}

@@ -1,0 +1,17 @@
+.item {
+    height: 25px;
+    width: 100%;
+}
+
+.item a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+
+}
+
+.item a.active {
+    color: gold;
+} 

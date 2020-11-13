@@ -2,17 +2,29 @@
 import React from 'react';
 import styles from './MyPosts.module.css';
 import Post from './Post/Post.jsx';
+import {addPostActionCreator} from './../../../redux/state';
+import {showTextInTextBoxActionCreator} from './../../../redux/state';
 
-const MyPosts = () => {
+
+const MyPosts = (props) => {
+   
+    let textBoxRef = React.createRef();
+    
+    let postsElements = props.posts.map ( el => <Post message = {el.message} likes = {el.likes}/> );
+   
+    let addPost = () => props.dispatch(addPostActionCreator());
+   
+    let showTextInTextBox = () => {
+        let text = textBoxRef.current.value;
+        props.dispatch(showTextInTextBoxActionCreator(text));
+    };
+
+    
     return (
         <div className = {styles.content}>
-
-            <div>
-                <Post message = 'Hi how are you?' likes = {3}/>
-                <Post message = "I'm fine?" likes = {5}/>
-                <Post message = 'Idiots :)' likes = {10}/>
-            </div>
-
+            { postsElements }           
+            <textarea ref={textBoxRef} onChange={ showTextInTextBox } value={props.textForTextbox} />
+            <button onClick = { addPost } >Send</button>
         </div>
     )
 }

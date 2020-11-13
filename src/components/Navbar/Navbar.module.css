@@ -1,15 +1,7 @@
 .navClass {
-    grid-area: n;
-    background-color: chocolate;
-    width: 300px;
-    padding: 20px;
-  }
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) 4fr;
+    column-gap: 10px;
 
-  .item a{
-      color: white;
-      text-decoration: none;
-  }
-  
-  .item a.active {
-      color: gold;
-  } 
+    background-color: rgb(224, 194, 24);
+}

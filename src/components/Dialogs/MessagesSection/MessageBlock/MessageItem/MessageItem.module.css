@@ -1,0 +1,17 @@
+.messageItem {
+    
+    background-color: lightcyan;
+    border-radius: 25px; 
+    padding: 12px;
+    margin: 0 0 10px 0;
+
+}
+
+.messageItem:nth-child(odd) {
+    width: 80%;
+}
+
+.messageItem:nth-child(even) {
+    width: 80%;
+    transform: translateX(16%);
+}

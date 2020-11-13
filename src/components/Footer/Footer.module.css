@@ -1,0 +1,14 @@
+.Footer {
+  background-color: rgb(143, 139, 104);
+  height: 150px;
+
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.Footer_copyrights {
+  grid-row: 5/6;
+  grid-column: 3/4;
+  text-align: center;
+}

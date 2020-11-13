@@ -1,0 +1,9 @@
+.dialogsWrapper {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+}
+
+.dialogsInfo {
+    background-color: rgb(250, 216, 158);
+    padding: 10px;
+}

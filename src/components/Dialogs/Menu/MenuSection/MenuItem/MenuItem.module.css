@@ -1,0 +1,30 @@
+.item {
+    height: 20px;
+    margin: 5px 0px 0px 5px;
+}
+
+.item a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: left;
+    line-height: 20px;
+}
+
+.item a.active {
+    color: gold;
+} 
+
+.item a::before{
+    display: inline-block;
+    content:'#';
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(65, 67, 68);
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 18px;
+    transform: translateX(-5px);
+}

@@ -1,0 +1,15 @@
+.menuSection {
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    padding: 20px;
+}
+
+.sectionName {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.sectionItems {
+    display: grid;
+    grid-template-rows: auto;
+}
