@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './MessagesSection.module.css';
 import MessagesBlock from './MessageBlock/MessagesBlock';
-import {addMessageActionCreator} from './../../../redux/state';
-import {showNewTextInInputActionCreator} from './../../../redux/state';
+import {addMessageActionCreator} from './../../../redux/dialogsReducer';
+import {showNewTextInInputActionCreator} from './../../../redux/dialogsReducer';
 
 const MessagesSection = (props) => {
 

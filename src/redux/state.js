@@ -1,36 +1,7 @@
+import dialogsReducer from "./dialogsReducer";
+import profileReducer from "./profileReducer";
+
 let renderEntireTree = () => {};
-
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const SHOW_NEW_TEXT_IN_INPUT = 'SHOW-NEW-TEXT-IN-INPUT';
-
-export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
-
-export const showNewTextInInputActionCreator = (text) => { 
-    return (
-        {
-            type: SHOW_NEW_TEXT_IN_INPUT,
-            text: text
-        }
-    )
-};
-
-
-
-const ADD_POST = 'ADD-POST';
-const SHOW_TEXT_IN_TEXTBOX = 'SHOW-TEXT-IN-TEXTBOX';
-
-export const addPostActionCreator = () => ({type: ADD_POST});
-
-export const showTextInTextBoxActionCreator = (text) => { 
-    return (
-        {
-            type: SHOW_TEXT_IN_TEXTBOX,
-            text: text
-        }
-    )
-};
-
-
 
 let textInInput = 'hey';
 
@@ -132,40 +103,10 @@ let store = {
     },
 
     dispatch (action) {
-        if (action.type === ADD_MESSAGE) {
 
-            let newMessage = {
-                id: 11,
-                message: this.getTextInInput()
-            };
-        
-            this.addNewDialogsMessage(2, 2, newMessage);
-            this.setTextInInput('');
-            renderEntireTree(this);
-        
-        } else if (action.type === SHOW_NEW_TEXT_IN_INPUT) {
-           
-            this.setTextInInput(action.text);
-            renderEntireTree(this);
-        
-        } else if (action.type === ADD_POST) {
-
-            let newPost = {
-                likes: 11,
-                message: this._state.profilePageState.textInTextbox
-            };
-        
-            this._state.profilePageState.postsData.push(newPost);
-            this._state.profilePageState.textInTextbox = '';
-            renderEntireTree(this);
-        
-        } else if (action.type === SHOW_TEXT_IN_TEXTBOX) {
-           
-            this._state.profilePageState.textInTextbox = action.text;
-            renderEntireTree(this);
-        
-        }
-
+        profileReducer(state.profilePageState, action);
+        dialogsReducer(state.dialogsPageState, action);
+        renderEntireTree(store);
     }
 };
 

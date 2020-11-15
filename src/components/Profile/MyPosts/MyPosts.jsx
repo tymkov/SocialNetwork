@@ -2,8 +2,8 @@
 import React from 'react';
 import styles from './MyPosts.module.css';
 import Post from './Post/Post.jsx';
-import {addPostActionCreator} from './../../../redux/state';
-import {showTextInTextBoxActionCreator} from './../../../redux/state';
+import {addPostActionCreator} from './../../../redux/profileReducer';
+import {showTextInTextBoxActionCreator} from './../../../redux/profileReducer';
 
 
 const MyPosts = (props) => {
