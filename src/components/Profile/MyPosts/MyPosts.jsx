@@ -16,6 +16,7 @@ const MyPosts = (props) => {
    
     let showTextInTextBox = () => {
         let text = textBoxRef.current.value;
+        debugger;
         props.dispatch(showTextInTextBoxActionCreator(text));
     };
 

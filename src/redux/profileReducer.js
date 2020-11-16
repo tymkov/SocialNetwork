@@ -2,7 +2,16 @@ const ADD_POST = 'ADD-POST';
 const SHOW_TEXT_IN_TEXTBOX = 'SHOW-TEXT-IN-TEXTBOX';
 
 
-const profileReducer = (state, action) => {
+let postsData = [
+    {message:'Hi how are you?', likes: 4},
+    {message:"I'm fine?", likes: 5},
+    {message:'Idiots :)', likes: 10}
+];
+
+let profilePageState = {postsData: postsData, textInTextbox: 'Starter'};
+
+
+const profileReducer = (state = profilePageState, action) => {
 
     switch (action.type) {
 

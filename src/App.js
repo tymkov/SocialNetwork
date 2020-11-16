@@ -11,14 +11,15 @@ import Settings from './components/Settings/Settings';
 import {BrowserRouter, Route} from 'react-router-dom';
 
 const App = (props) => {
+    debugger;
     return (
         <BrowserRouter>
             <div className = 'app-wrapper'>
                 <Header />
-                <Navbar navMenuData={props.store.getNavMenuState()}/>
+                <Navbar navMenuData={props.store.getState().navbarState}/>
                 <main className = 'app-wrapper-content'>
-                    <Route path='/dialogs' render={ () => <Dialogs store={props.store} />}/>
-                    <Route path='/profile' render={ () => <Profile state={props.store.getProfileState()} textForTextbox={props.store.getTextInTextbox()} dispatch={props.store.dispatch.bind(props.store)}/>} />
+                    <Route path='/profile' render={ () => <Profile state={props.store.getState().profilePageState} dispatch={props.store.dispatch.bind(props.store)}/>} />
+                    <Route path='/dialogs' render={ () => <Dialogs state={props.store.getState().dialogsPageState} dispatch={props.store.dispatch.bind(props.store)} />}/>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
                     <Route path='/settings' component={Settings}/>

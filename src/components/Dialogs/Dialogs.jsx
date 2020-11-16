@@ -8,9 +8,9 @@ const Dialogs = (props) => {
     return (
         <div className={styles.dialogsWrapper}>
             
-            <DialogsMenu menuData = {props.store.getDialogsState().dialogsMenuData} />
+            <DialogsMenu menuData = {props.state.dialogsMenuData} />
 
-            <MessagesSection store={props.store}/>
+            <MessagesSection state={props.state} dispatch={props.dispatch}/>
             
             <div className={styles.dialogsInfo}>Dialog Info</div>
 
